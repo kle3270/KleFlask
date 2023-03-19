@@ -3,6 +3,7 @@ sys.path.append('..\Read_write_etc')
 import Password_Function
 import Read
 import Write
+import LoginFunction
 
 class User:
     def __init__(self,username,password,numberidentification):
@@ -21,8 +22,14 @@ class User:
 # Create User list
 Users = []
 Users = Read.Joinlist_file('Usernames.txt')
+Pass = []
+Pass = Read.Joinlist_file('Passwords.txt')
+#Add all users to class
+for user1 in Users:
+    x = int(Users.index(user1))
+    User(user1,Pass[x],x)
 #Creation
-Username =input("Type in your username")
+Username =input("Type in your username:")
 if Username in Users:
     existing_user = True
 else:
@@ -31,8 +38,13 @@ else:
 
 #Login
 if existing_user:
-    number
+    numberidentification = Users.index(Username)
     password = input("Type in your password:")
+    Authentification = LoginFunction.LoginCheck(password, Pass, numberidentification)
+    while Authentification != 1:
+        password = input("Your password is invalid. Please type in the correct password to login: ")
+        Authentification = LoginFunction.LoginCheck(password, Pass, numberidentification)
+    print("You have successfully logged in.")
 #Sign Up
 if not existing_user:
     print("Your username does not exist, lets create an account")

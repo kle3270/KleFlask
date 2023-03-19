@@ -8,5 +8,4 @@ def Joinlist_file(file):
     with open(file, 'r') as Opened:
         Readfile = Opened.read()
         Splitfile = Readfile.split(',')
-        print(Splitfile)
     return Splitfile
