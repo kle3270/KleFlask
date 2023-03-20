@@ -7,5 +7,5 @@ def Read_file(file):
 def Joinlist_file(file):
     with open(file, 'r') as Opened:
         Readfile = Opened.read()
-        Splitfile = Readfile.split(',')
+        Splitfile = Readfile.split('\n')
     return Splitfile

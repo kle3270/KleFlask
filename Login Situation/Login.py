@@ -17,17 +17,20 @@ class User:
         Passwords.append(self.password)
     def store_age(self,age):
         self.age = age
+        return age
+
 
 
 # Create User list
-Users = []
-Users = Read.Joinlist_file('Usernames.txt')
-Pass = []
-Pass = Read.Joinlist_file('Passwords.txt')
+Users = Read.Joinlist_file('Z_Usernames')
+Pass = Read.Joinlist_file('Z_Passwords')
+Age = Read.Joinlist_file('Z_Age')
+
 #Add all users to class
 for user1 in Users:
     x = int(Users.index(user1))
     User(user1,Pass[x],x)
+    numberidentification = x
 #Creation
 Username =input("Type in your username:")
 if Username in Users:
@@ -53,5 +56,8 @@ if not existing_user:
         print(f"{Username} is taken")
         Username = input("Type in a username:")
     password = input("Type in a password:")
-    Write.Write_file(password,'Passwords.txt')
-    Write.Write_file(Username,'Usernames.txt')
+    Write.Write_file(password,'Z_Passwords')
+    Write.Write_file(Username,'Z_Usernames')
+#Main
+#Addtonotes = input('What would you like to add')
+#Write.Write_file_newline(Addtonotes,'Z_NotePadStorage')
