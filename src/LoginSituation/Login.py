@@ -1,6 +1,5 @@
 import sys
 sys.path.append('..\Read_write_etc')
-import Password_Function
 import Read
 import Write
 import LoginFunction
@@ -21,7 +20,11 @@ class User:
         return age
 
 
-
+import cgi
+print('hi')
+form = cgi.FieldStorage()
+searchterm =  form.getvalue('searchbox')
+print(searchterm)
 # Create User list
 Users = Read.Joinlist_file('Z_Usernames')
 Pass = Read.Joinlist_file('Z_Passwords')
@@ -59,12 +62,13 @@ if not existing_user:
     password = input("Type in a password:")
     Write.Write_file(password,'Z_Passwords')
     Write.Write_file(Username,'Z_Usernames')
-    CreateFile.Create_file_notes(Username)
+    #CreateFile.Create_file_notes(Username)
 
 #Main
 Options = input("1.Quiz\n2.Notes\nWhat would you like to do today?")
 #Note taking
-if Options == "2":
+
+'''if Options == "2":
     Linecount = Read.Line_Count(f'Z_{Username}Notes.txt')
     Notepadoption = input('0.Quit\n1.Write\n2.View\n3.Edit\nWhat do you want to do in your notes?')
     while Notepadoption != "0":
@@ -74,7 +78,13 @@ if Options == "2":
         if Notepadoption == '2':
             Read.Read_file(f'Z_{Username}Notes.txt')
         if Notepadoption == '3':
+           print("Sorry this is a work in progress")
+        Read.Read_file(f'Z_{Username}Notes.txt')
+        Lineedit = input('Which line would you like to edit?')
 
         Notepadoption = input('1.Write\n2.View\n3.Quit\nWhat do you want to do in your notes?')
     #Addtonotes = input('What would you like to add')
     #Write.Write_file_newline(Addtonotes,'Z_NotePadStorage')
+'''
+#CREATE HTML PAGE FOR NOTES
+CreateFile.Create_file_html(Username)

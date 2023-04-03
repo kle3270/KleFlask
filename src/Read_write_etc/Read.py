@@ -18,3 +18,8 @@ def Line_Count(file):
             if Line == '\n':
                 Linecount = Linecount + 1
     return Linecount
+def Readline_file(file):
+    with open(file, 'r') as Opened:
+        Readfile = Opened.readline(1)
+        print(Readfile)
+    return Readfile
