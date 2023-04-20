@@ -6,3 +6,4 @@
 6. Not actually posting so need to understand what post actually is. Its posting to /refreshingnotes/user but its getting from notes/s
 7. For somereason it doesn't work, actually figured it out because usernames is a list that resets everytime the server resets so of course there will be no user named whatever, easy fix
 8. Github
+9. Add security --> lots of work sorry

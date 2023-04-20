@@ -16,12 +16,11 @@ def Joinlist_file(file):
         Readfile = Opened.read()
         Splitfile = Readfile.split('\n')
 def Line_Count(file):
-    Linecount = 0
-    with open(file,'r') as Opened:
+    with open(file, 'r') as Opened:
         Readfile = Opened.read()
-        for Line in Readfile:
-            if Line == '\n':
-                Linecount = Linecount + 1
+        Text = Readfile.split('\n')
+        Linecount= len(Text)
+
     return Linecount
 def Readline_file(file):
     with open(file, 'r') as Opened:
@@ -36,12 +35,15 @@ def Write_file(write,file):
         g.write(f'{write}\n')
     return
 def Edit_line(file,linenum,edit):
-    Linecount = 0
     with open(file,'r') as Opened:
+
         Readfile = Opened.read()
-
-    Readfile.replace(f'Line {linenum}')
-
-    return Linecount
+        Text = Readfile.split('\n')
+        print(Text)
+        Text[linenum-1] = edit
+    with open(file,'w') as Writing:
+        for line in Text:
+            Writing.write(f'{line}\n')
+    return
 
 
