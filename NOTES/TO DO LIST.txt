@@ -1,0 +1,8 @@
+1. Compartmentalize Login into different functions
+2. Create main file which will call the server to run and when certain things happen it will run functions from login
+3. Check if username exists for signup, rn focusing on getting login functionality
+4. Figure out how to actually use classes right now im just gonna use the good ol list maybe dictionary
+5. Redirect page instead of just doing a link.
+6. Not actually posting so need to understand what post actually is. Its posting to /refreshingnotes/user but its getting from notes/s
+7. For somereason it doesn't work, actually figured it out because usernames is a list that resets everytime the server resets so of course there will be no user named whatever, easy fix
+8. Github

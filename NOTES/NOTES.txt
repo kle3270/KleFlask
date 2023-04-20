@@ -1,0 +1,10 @@
+1. Use dynamically generated URLs  -> use objects to create a notepage for a name
+2. When using integers need to do <int:____> and for other data types I guess you can also do <type:___> for the parameter of route
+3.url_for --> this will be used to send a user to their web page and not somebody elses
+4.render_template allows loading of files
+5.request.form grabs all the information and post is used in html to put it on the page that I want the data to go
+6. Attribute means two different things, in get attribute it gets the value but in hasattr it returns if the object has an attribute named 'x'
+7.https://www.geeksforgeeks.org/print-objects-of-a-class-in-python/
+8. POST --> if it wants to put something on another page, it grabs the form info from the previous page and then sends it as data to the next
+9. For some reason I send the data to post onto goto but maybe it cant also send that over to the next page
+10. Because the method isnt post it isnt posting it over to the next page

@@ -1,0 +1,3 @@
+1.Each name will be the name of the object and will create an object -> now the object is defined
+2. Garbage collector to check but apparently it is super slow, probably just create a list instead which is easier
+but just as bad at large scales
