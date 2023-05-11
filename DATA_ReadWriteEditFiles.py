@@ -40,7 +40,7 @@ def Edit_line(file,linenum,edit):
         Readfile = Opened.read()
         Text = Readfile.split('\n')
         print(Text)
-        Text[linenum-1] = edit
+        Text[linenum-1] = f'{linenum}.{edit}'
     with open(file,'w') as Writing:
         for line in Text:
             Writing.write(f'{line}\n')
